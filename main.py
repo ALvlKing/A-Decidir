@@ -1,4 +1,4 @@
-# Menu de Seleção
+# Menu de Seleção:
 def menu():
     while True:
         print("\n=== MENU DE TAREFAS ===")
@@ -8,7 +8,7 @@ def menu():
         print("4 - Excluir tarefa")
         print("5 - Sair")
 
-        opcao = input("Escolha uma opção: ")
+        opcao = input("Escolha uma opção a seguir: ")
 
         if opcao == "1":
             print("Função de adicionar tarefa aqui.")
