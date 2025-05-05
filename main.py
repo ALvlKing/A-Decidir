@@ -26,7 +26,7 @@ while True:
     for tarefa in lista_tarefa:
         print(f"- {tarefa}")
 
-print("\nFim da edição. Tarefas salvas com sucesso.")
+print("\nTarefas salvas com sucesso.")
 
 # 3. Marcar Tarefas
 
