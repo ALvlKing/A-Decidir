@@ -1,6 +1,6 @@
 ## 📝 Gerenciador de Tarefas (To-Do List)
 
-Projeto prático da disciplina Programação de Computadores (P1) – 2025.
+Projeto prático da disciplina Programação de Computadores – 2025.
 
 Este projeto é uma aplicação simples de gerenciamento de tarefas (To-Do List), desenvolvida utilizando exclusivamente a linguagem Python, respeitando o paradigma procedural, conforme as diretrizes estabelecidas pelo professor Jeofton Costa Melo.
 
