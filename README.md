@@ -61,7 +61,9 @@ python main.py
 
 ## 📅 Datas Importantes
 
-    Entrega Final: 12/06/2025 até 23:59 (improrrogável)
+> ~~Entrega Final: 12/06/2025 até 23:59 (improrrogável)~~
+
+    [NEW] Entrega Final: 09/06/2025 até 23:59 (Antecipação por Fatores Externos)
 
 ## 📜 Licença
 
