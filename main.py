@@ -5,12 +5,6 @@ def adicionar_tarefas():
         tarefa = input('Digite sua Tarefa:\n')
         listat.write = (tarefa + '/n')
 
-    '''Abre o arquivo no modo de leitura para que o usuario veja se o que o mesmo escreveu foi salvo corretamente'''
-    with open('list_terefas.txt', 'r') as listat:
-        conteudo = listat.read()
-        print('/nSuas tarefas:')
-        print(conteudo)
-
 #----------------------------------------------------------------------------------------------------------------------
 #2. Ver Tarefas
 def todas_tarefas():
