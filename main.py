@@ -42,6 +42,7 @@ def remover_tarefas():
 
     print("Linha removida com sucesso.")
 
+#----------------------------------------------------------------------------------------------------------------------
 def menu():
     while True:
         print("\n=== MENU DE TAREFAS ===")
