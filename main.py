@@ -1,14 +1,14 @@
-#1. Adiconar Tarefa
+#1. Adicionar Tarefa
 def adicionar_tarefas():
-    '''Abre o arquivo da lista de tarefas e escreve as atividades do usario em um documento txt'''
+    '''Abre o arquivo da lista de tarefas e escreve as atividades do usuário em um documento txt'''
     with open('list_tarefas.txt', 'a') as listat:
         tarefa = input('Digite sua Tarefa:\n')
-        listat.write    (tarefa + '\n')
+        listat.write(tarefa + '\n')
 
 #----------------------------------------------------------------------------------------------------------------------
 #2. Ver Tarefas
 def todas_tarefas():
-    '''Abre o arquivo com as tarefas e mostra ao usuario'''
+    '''Abre o arquivo com as tarefas e mostra ao usuário'''
     with open('list_tarefas.txt', 'r') as listat:
         total = listat.read()
         print('\nEssas são suas tarefas:')
@@ -16,38 +16,35 @@ def todas_tarefas():
         print('Já finalizou alguma hoje? Vamos dar o nosso melhor! 😄')
 
 #----------------------------------------------------------------------------------------------------------------------
-#3. Marcar tarefa como concluída
+#3. Marcar tarefa como concluída - versão simples
 def marcar_tarefa():
-    '''Permite ao usuário marcar uma tarefa como concluída'''
-    try:
-        with open('list_tarefas.txt', 'r') as arquivo:
-            tarefas = arquivo.readlines()
+    arquivo = open('list_tarefas.txt', 'r')
+    tarefas = arquivo.readlines()
+    arquivo.close()
 
-        if not tarefas:
-            print("Não há tarefas para marcar.")
-            return
+    if len(tarefas) == 0:
+        print("Não há tarefas para marcar.")
+        return
 
-        print("\n=== TAREFAS ===")
-        for i, tarefa in enumerate(tarefas):
-            print(f"{i + 1}. {tarefa.strip()}")
+    for i in range(len(tarefas)):
+        print(f"{i+1}. {tarefas[i].strip()}")
 
-        num = int(input("Digite o número da tarefa que deseja marcar como concluída: ")) - 1
+    num = int(input("Número da tarefa para marcar como concluída: ")) - 1
 
-        if 0 <= num < len(tarefas):
-            if "[CONCLUÍDA]" in tarefas[num]:
-                print("Essa tarefa já está marcada como concluída.")
-            else:
-                tarefas[num] = tarefas[num].strip() + " [CONCLUÍDA]\n"
-                with open('list_tarefas.txt', 'w') as arquivo:
-                    arquivo.writelines(tarefas)
-                print("Tarefa marcada como concluída!")
-        else:
-            print("Número inválido.")
+    if num < 0 or num >= len(tarefas):
+        print("Número inválido.")
+        return
 
-    except FileNotFoundError:
-        print("Arquivo de tarefas não encontrado.")
-    except ValueError:
-        print("Por favor, digite um número válido.")
+    if "[CONCLUÍDA]" in tarefas[num]:
+        print("Essa tarefa já está marcada como concluída.")
+    else:
+        tarefas[num] = tarefas[num].strip() + " [CONCLUÍDA]\n"
+
+        arquivo = open('list_tarefas.txt', 'w')
+        arquivo.writelines(tarefas)
+        arquivo.close()
+
+        print("Tarefa marcada como concluída!")
 
 #----------------------------------------------------------------------------------------------------------------------
 #4. Remover Tarefas
@@ -89,13 +86,13 @@ def menu():
         opcao = input("Escolha uma opção: ")
 
         if opcao == "1":
-            adicionar_tarefas()  # Agora chama a função
+            adicionar_tarefas()
         elif opcao == "2":
-            todas_tarefas()  # Agora chama a função
+            todas_tarefas()
         elif opcao == "3":
-            marcar_tarefa()  # Agora chama a função implementada
+            marcar_tarefa()
         elif opcao == "4":
-            remover_tarefas()  # Agora chama a função original dele
+            remover_tarefas()
         elif opcao == "5":
             print("Encerrando o programa...")
             break
