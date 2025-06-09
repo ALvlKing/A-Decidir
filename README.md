@@ -57,7 +57,7 @@ python main.py
 
 ## 🎥 Demonstração
 
-### 🔗 Link para o vídeo no YouTube: [Em Breve]
+### 🔗 Link para o vídeo no YouTube: https://youtu.be/9TSFOcUUeck?si=TTYhVdIvBEl9KU_t
 
 ## 📅 Datas Importantes
 
